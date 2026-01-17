@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx
+  namespace: default   # ✅ ADD THIS
 spec:
   replicas: 1
   selector:
@@ -17,4 +18,5 @@ spec:
         image: nginx:latest
         ports:
         - containerPort: 80
+
 
